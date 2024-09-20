@@ -10,8 +10,13 @@ Fork of [PyQtRibbon](https://github.com/haiiliin/pyqtribbon) - ribbon bar for Py
 * Doesn't contain assets (icons and qss files)
 * Doesn't contain internal documentation (for now)
 
+Snakeribbon is distributed to PyPI, you can use pip to install it:
 
-For now, you can install the package from source:
+```shell
+pip install snakeribbon
+```
+
+Or you can install the package from source:
 ```shell
 pip install git+https://github.com/uselessvevo/snakeribbon.git@main
 ```
