@@ -2,7 +2,7 @@
 # https://setuptools.pypa.io/en/stable/userguide/pyproject_config.html
 
 [build-system]
-requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -27,7 +27,9 @@ classifiers = [
     "Operating System :: OS Independent",
     "Development Status :: 4 - Beta",
 ]
-dependencies = ["numpy", "PySide6"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
 
 [project.urls]
 "GitHub" = "https://github.com/uselessvevo/snakeribbon"
@@ -40,15 +42,3 @@ snakeribbon = ["icons/*", "styles/*"]
 
 [tool.setuptools_scm]
 write_to = "snakeribbon/_version.py"
-
-[tool.pytest.ini_options]
-testpaths = ["snakeribbon", "tests"]
-addopts = "-rf -s --cov=snakeribbon --cov-report=xml --cov-report=html --cov-report=term-missing --doctest-modules"
-
-[tool.black]
-line-length = 120
-target-version = ['py38', 'py39', 'py310', 'py311', 'py312', 'py313']
-include = '(snakeribbon/.*\.py|tests/.*\.py|docs/source/conf\.py)'
-
-[tool.isort]
-profile = "black"
