@@ -8,6 +8,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "snakeribbon"
 authors = [
+  { name="WANG Hailin", email="hailin.wang@connect.polyu.hk" },
   { name="Ivanov Cyril", email="woah.npc@yandex.ru" },
 ]
 description = "Ribbon Bar for PySide6 applications"
