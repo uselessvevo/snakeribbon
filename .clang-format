@@ -1,9 +1,0 @@
----
-BasedOnStyle: Google
-IndentWidth: 4
----
-Language: Cpp
-PointerAlignment: Left
-SortIncludes: CaseSensitive
-ColumnLimit: 120
----

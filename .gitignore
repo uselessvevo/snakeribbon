@@ -134,7 +134,7 @@ dmypy.json
 .vscode/
 .vs/
 
-pyqtribbon/_version.py
+snakeribbon/_version.py
 docs/source/apidoc
 cmake-*/
 CMakeLists.txt.user
