@@ -6,7 +6,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-version = "1.0.0-dev"
+version = "1.0.1-dev"
 name = "snakeribbon"
 authors = [
   { name="WANG Hailin", email="hailin.wang@connect.polyu.hk" },
