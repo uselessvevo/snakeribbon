@@ -148,9 +148,9 @@ class RibbonGallery(QtWidgets.QFrame):
     def resize_event(self, a0: QtGui.QResizeEvent) -> None:
         """Resize the gallery."""
         height = self.height() - self._main_layout.contents_margins().top() - self._main_layout.contents_margins().bottom()
-        self._up_button.setFixedSize(height // 4, height // 3)  # type: ignore
-        self._down_button.setFixedSize(height // 4, height // 3)  # type: ignore
-        self._more_button.setFixedSize(height // 4, height // 3)  # type: ignore
+        self._up_button.set_fixed_size(height // 4, height // 3)  # type: ignore
+        self._down_button.set_fixed_size(height // 4, height // 3)  # type: ignore
+        self._more_button.set_fixed_size(height // 4, height // 3)  # type: ignore
         super().resize_event(a0)
 
     def popup_menu(self) -> RibbonPermanentMenu:
@@ -276,7 +276,7 @@ class RibbonGallery(QtWidgets.QFrame):
             popup_button.set_checkable(True)
         self._buttons.append(button)
         self._popup_buttons.append(popup_button)
-        button.clicked.connect(lambda checked: popup_button.setChecked(checked))  # type: ignore
+        button.clicked.connect(lambda checked: popup_button.set_checked(checked))  # type: ignore
         if self._popup_hide_on_click:
             popup_button.clicked.connect(self.hide_popup_widget)  # type: ignore
         popup_button.clicked.connect(self.set_selected_button)  # type: ignore

@@ -301,7 +301,7 @@ class RibbonPanel(QtWidgets.QFrame):
             / self._grid_layout_manager.rows
         )
 
-    def setTitle(self, title: str):
+    def set_title(self, title: str):
         """Set the title of the panel.
 
         :param title: The title to set.
